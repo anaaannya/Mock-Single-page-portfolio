@@ -1,9 +1,17 @@
 /* Global Styles */
-body {
-    font-family: 'Trebuchet MS', 'Lucida Sans', Arial, sans-serif;
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans', Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    margin: 0;
 }
 
 /* Navigation Bar */
@@ -18,8 +26,7 @@ body {
 
 .profile_name {
     color: #d1d1e0;
-    font-size: 1.25rem;
-    padding-left: 1rem;
+    font-size: 1.5rem;
 }
 
 .contact_info {
@@ -27,7 +34,7 @@ body {
     align-items: center;
     font-size: 0.875rem;
     color: lightgray;
-    margin-top: 5px;
+    margin-top: 0.5rem;
 }
 
 .contact_info img {
@@ -38,7 +45,7 @@ body {
 .topdiv {
     display: flex;
     gap: 1rem;
-    padding-right: 1rem;
+    flex-wrap: wrap;
 }
 
 .topmenu {
@@ -51,7 +58,6 @@ body {
 .topmenu:hover {
     color: white;
     font-weight: bold;
-    text-decoration: underline;
 }
 
 /* About Me Section */
@@ -64,21 +70,19 @@ body {
 }
 
 .profile_image {
-    width: 250px;
-    height: auto;
+    width: 100%;
+    max-width: 300px;
     border-radius: 8px;
 }
 
 #about-me h1 {
     color: #7600bc;
     font-size: 2rem;
-    margin-bottom: 0.5rem;
 }
 
 #about-me p {
     font-size: 1rem;
     color: gray;
-    line-height: 1.5;
 }
 
 /* Skills Section */
@@ -96,8 +100,8 @@ body {
 .all_skills {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
     gap: 1rem;
+    justify-content: space-around;
 }
 
 .skill {
@@ -107,8 +111,8 @@ body {
     border: 1px solid gray;
     border-radius: 6px;
     text-align: center;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
     background-color: white;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
 }
 
 .skill img {
@@ -159,22 +163,20 @@ body {
 }
 
 .all_recommendations {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    padding: 1rem;
 }
 
 .recommendation {
-    flex: 1 1 250px;
-    max-width: 30%;
     padding: 1rem;
     background-color: white;
     border-radius: 8px;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
     font-style: italic;
-    text-align: left;
     color: gray;
+    text-align: left;
 }
 
 /* Form Section */
@@ -255,12 +257,12 @@ textarea {
     }
 
     .profile_image {
-        width: 200px;
+        width: 80%;
     }
 
-    /* Recommendations - 2 columns */
-    .recommendation {
-        max-width: 45%;
+    /* Recommendations - 2 Columns */
+    .all_recommendations {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
@@ -270,7 +272,6 @@ textarea {
     .topdiv {
         flex-direction: column;
         align-items: center;
-        padding-top: 0.5rem;
     }
 
     /* Skills */
@@ -283,9 +284,9 @@ textarea {
         max-width: 100%;
     }
 
-    /* Recommendations - 1 column */
-    .recommendation {
-        max-width: 100%;
+    /* Recommendations - 1 Column */
+    .all_recommendations {
+        grid-template-columns: 1fr;
     }
 
     /* Form */
@@ -294,5 +295,3 @@ textarea {
         margin: 0;
     }
 }
-
-
