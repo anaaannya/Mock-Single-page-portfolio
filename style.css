@@ -322,3 +322,56 @@ body {
     text-align: center;
     cursor: pointer;
     } 
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    /* Navigation bar */
+    .topdiv {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    /* About Me Section */
+    #about-me {
+        display: block;
+        text-align: center;
+    }
+    #about-me img {
+        width: 250px;
+        margin: 0 auto;
+    }
+
+    /* Skills Section */
+    .all_skills {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Project Cards */
+    .projects-container {
+        margin: 0 auto;
+        padding: 10px;
+    }
+    .project-card {
+        margin: 15px;
+        padding: 15px;
+    }
+
+    /* Recommendation Section */
+    .all_recommendations {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Pop-up and Buttons */
+    .popup {
+        width: 90%;
+        padding: 20px;
+    }
+    .popup button {
+        width: 80%;
+        margin: 0 auto;
+    }
+}
