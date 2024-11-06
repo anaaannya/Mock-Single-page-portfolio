@@ -321,51 +321,106 @@ body {
     border-radius: 6px;
     text-align: center;
     cursor: pointer;
-    } 
+    }
 
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-    /* Navigation bar */
-    .topdiv {
+/* Default Styles (Desktop) */
+.all_recommendations {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.recommendation {
+    width: 30%;
+    font-style: italic;
+    padding: 1rem;
+    background-color: #fff;
+    border-radius: 11px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid gray;
+}
+
+/* Skills Section */
+.all_skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* Tablet View */
+@media (max-width: 1024px) {
+    /* Recommendations in 2 Columns */
+    .all_recommendations {
         display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+    .recommendation {
+        width: 45%;
+    }
+
+    /* Skills - Spaced Out */
+    .all_skills {
+        gap: 15px;
+    }
+    .skill {
+        width: 45%;
+    }
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+    /* Navigation */
+    .topdiv {
         flex-direction: column;
         align-items: center;
-        padding: 10px;
+        gap: 10px;
+        text-align: center;
     }
 
     /* About Me Section */
     #about-me {
-        display: block;
         text-align: center;
     }
     #about-me img {
-        width: 250px;
+        width: 200px;
         margin: 0 auto;
     }
 
-    /* Skills Section */
-    .all_skills {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    /* Project Cards */
-    .projects-container {
-        margin: 0 auto;
-        padding: 10px;
-    }
-    .project-card {
-        margin: 15px;
-        padding: 15px;
-    }
-
-    /* Recommendation Section */
+    /* Recommendations in Single Column */
     .all_recommendations {
         flex-direction: column;
         align-items: center;
     }
+    .recommendation {
+        width: 90%;
+        margin: 10px 0;
+    }
 
-    /* Pop-up and Buttons */
+    /* Skills - Stacked */
+    .all_skills {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    .skill {
+        width: 90%;
+    }
+
+    /* Project Cards */
+    .projects-container {
+        padding: 10px;
+        margin: 0 auto;
+    }
+    .project-card {
+        margin: 10px 0;
+        padding: 15px;
+    }
+
+    /* Pop-up Styling */
     .popup {
         width: 90%;
         padding: 20px;
@@ -375,3 +430,4 @@ body {
         margin: 0 auto;
     }
 }
+
